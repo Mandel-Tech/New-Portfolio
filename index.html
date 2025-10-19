@@ -11,7 +11,10 @@
     <nav id="navbar">
         <div class="container">
             <div class="logo">Okiki Nelson</div>
-            <button class="nav-toggle" id="navToggle">☰</button>
+            <div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+            </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -54,48 +57,46 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+    <section id="about" class="about-section">
         <div class="container">
             <h2>About Me</h2>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-                    <div>
-                        <p style="font-size: 1.1rem; line-height: 1.9; color: #555; margin-bottom: 1.5rem;">
-                            <strong style="color: var(--primary);">Results-driven Software Engineer</strong> with proven expertise in backend development using Python frameworks. Experienced in building scalable RESTful APIs, implementing secure authentication systems, and working with both SQL and NoSQL databases.
+            <div class="max-w-900">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            <strong>Results-driven Software Engineer</strong> with proven expertise in backend development using Python frameworks. Experienced in building scalable RESTful APIs, implementing secure authentication systems, and working with both SQL and NoSQL databases.
                         </p>
-                        <p style="font-size: 1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+                        <p>
                             Demonstrated ability to collaborate effectively in agile team environments through successful delivery of production-ready applications like Bookify E-Library. Passionate about clean code, database optimization, and innovative solutions.
                         </p>
-                        <p style="font-size: 0.95rem; color: var(--accent); font-weight: 600;">
-                            ✓ Open to remote work, relocation, and exciting opportunities!
-                        </p>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                            <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">6+</div>
-                            <div style="font-size: 0.9rem; color: #666; font-weight: 600;">Projects Completed</div>
-                        </div>
-                        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-left: 4px solid var(--accent);">
-                            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">3+</div>
-                            <div style="font-size: 0.9rem; color: #666; font-weight: 600;">Years Experience</div>
-                        </div>
-                        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                            <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">30+</div>
-                            <div style="font-size: 0.9rem; color: #666; font-weight: 600;">API Endpoints</div>
-                        </div>
-                        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-left: 4px solid var(--accent);">
-                            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">99%</div>
-                            <div style="font-size: 0.9rem; color: #666; font-weight: 600;">Uptime</div>
+                        <p class="highlight">✓ Open to remote work, relocation, and exciting opportunities!</p>
+                        <div class="about-ctas">
+                            <a href="https://github.com/Mandel-Tech" target="_blank" class="btn">
+                                <span style="margin-right: 0.5rem;">⭐</span> View GitHub Profile
+                            </a>
+                            <a href="https://www.linkedin.com/in/okiki-nelson-50863815a" target="_blank" class="btn btn-outline-primary">
+                                Connect on LinkedIn
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div style="margin-top: 3rem; text-align: center;">
-                    <a href="https://github.com/Mandel-Tech" target="_blank" class="btn">
-                        <span style="margin-right: 0.5rem;">⭐</span> View GitHub Profile
-                    </a>
-                    <a href="https://www.linkedin.com/in/okiki-nelson-50863815a" target="_blank" class="btn btn-secondary" style="color: var(--primary); border-color: var(--primary);">
-                        Connect on LinkedIn
-                    </a>
+                    <div class="about-cards">
+                        <div class="about-stat">
+                            <div class="value">6+</div>
+                            <div class="label">Projects Completed</div>
+                        </div>
+                        <div class="about-stat accent">
+                            <div class="value">3+</div>
+                            <div class="label">Years Experience</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="value">30+</div>
+                            <div class="label">API Endpoints</div>
+                        </div>
+                        <div class="about-stat accent">
+                            <div class="value">99%</div>
+                            <div class="label">Uptime</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -116,6 +117,16 @@
                         <li>JWT Authentication</li>
                         <li>SQLAlchemy ORM</li>
                     </ul>
+                    <div class="skill-meters">
+                        <div class="skill-meter">
+                            <div class="label">Python</div>
+                            <div class="bar"><span class="w-90"></span></div>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="label">FastAPI</div>
+                            <div class="bar"><span class="w-85"></span></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card">
                     <h3>💾 Databases</h3>
@@ -183,6 +194,7 @@
             <div class="projects-grid">
                 <!-- Bookify Project -->
                 <div class="project-card">
+                    <div class="project-cover" aria-hidden="true"></div>
                     <div class="project-header">
                         <h3>Bookify E-Library</h3>
                         <div>
@@ -219,6 +231,7 @@
 
                 <!-- Mandel Blog -->
                 <div class="project-card">
+                    <div class="project-cover" aria-hidden="true"></div>
                     <div class="project-header">
                         <h3>Mandel Blog Complete</h3>
                         <div>
@@ -250,6 +263,7 @@
 
                 <!-- Hotel Booking -->
                 <div class="project-card">
+                    <div class="project-cover" aria-hidden="true"></div>
                     <div class="project-header">
                         <h3>Hotel Booking System</h3>
                         <div>
@@ -280,6 +294,7 @@
 
                 <!-- Django Blog -->
                 <div class="project-card">
+                    <div class="project-cover" aria-hidden="true"></div>
                     <div class="project-header">
                         <h3>Django Blog Platform</h3>
                         <div>
@@ -310,6 +325,7 @@
 
                 <!-- Flask Auth App -->
                 <div class="project-card">
+                    <div class="project-cover" aria-hidden="true"></div>
                     <div class="project-header">
                         <h3>Flask Authentication App</h3>
                         <div>
@@ -340,6 +356,7 @@
 
                 <!-- KodeCamp Tasks -->
                 <div class="project-card">
+                    <div class="project-cover" aria-hidden="true"></div>
                     <div class="project-header">
                         <h3>KodeCamp Projects</h3>
                         <div>
@@ -422,14 +439,14 @@
                     <div class="contact-item-icon">📧</div>
                     <div class="contact-item-content">
                         <h3>Email</h3>
-                        <p><a href="mailto:nelsonokiki@gmail.com">nelsonokiki@gmail.com</a></p>
+                        <p><a href="mailto:nelsonokiki@gmail.com" id="emailValue">nelsonokiki@gmail.com</a> <button class="copy-btn" data-copy-target="#emailValue">Copy</button></p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-item-icon">📱</div>
                     <div class="contact-item-content">
                         <h3>Phone</h3>
-                        <p><a href="tel:+2347034618587">+234 703 461 8587</a></p>
+                        <p><a href="tel:+2347034618587" id="phoneValue">+234 703 461 8587</a> <button class="copy-btn" data-copy-target="#phoneValue">Copy</button></p>
                     </div>
                 </div>
                 <div class="contact-item">
