@@ -58,6 +58,12 @@ body {
 [data-theme="dark"] .skill-card h3 {
     color: #e6edf7;
 }
+[data-theme="dark"] .skill-card ul li {
+    color: #e6edf7;
+}
+[data-theme="dark"] .skill-card ul li:hover {
+    color: #5596f2;
+}
 
 [data-theme="dark"] .tech-tag {
     background: rgba(77, 163, 255, 0.12);
