@@ -187,7 +187,7 @@ nav ul a {
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: var(--radius-xs);
     transition: all 0.25s;
     position: relative;
@@ -197,7 +197,7 @@ nav ul a:hover,
 nav ul a[aria-current="page"] {
     color: var(--text);
     background: transparent;
-    border: 1px solid var(--border-hover);
+    border: 2px solid var(--border-hover);
 }
 
 nav ul a[aria-current="page"]::after {
@@ -1667,7 +1667,7 @@ footer {
         bottom: 0;
         width: min(86vw, 340px);
         background: var(--bg-card-solid);
-        border-left: 1px solid var(--border);
+        border-left: 2px solid var(--border);
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
@@ -1685,14 +1685,18 @@ footer {
     nav ul a {
         font-size: 1.05rem;
         padding: 0.75rem 0.9rem;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         border-radius: 12px;
     }
 
     nav ul a:hover,
     nav ul a[aria-current="page"] {
-        background: transparent;
+        background: var(--bg-elevated);
         border-color: var(--border-hover);
+    }
+
+    nav ul a[aria-current="page"]::after {
+        display: none;
     }
 
     .nav-toggle span {

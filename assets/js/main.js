@@ -3,7 +3,57 @@
    =================================================================== */
 
 const PORTFOLIO_CONFIG = {
-  projects: [],
+  projects: [
+    {
+      featured: true,
+      title: 'Skiflux Backend',
+      description: 'Backend service powering the Skiflux platform.',
+      status: 'Project',
+      highlights: [],
+      tags: ['Backend'],
+      links: {},
+    },
+    {
+      title: 'Job Board',
+      description: 'Job board application.',
+      status: 'Project',
+      highlights: [],
+      tags: ['Web'],
+      links: { github: 'https://github.com/maandel/job_board' },
+    },
+    {
+      title: 'Event Ticket',
+      description: 'Event ticketing application.',
+      status: 'Project',
+      highlights: [],
+      tags: ['Web'],
+      links: { github: 'https://github.com/maandel/event_ticket' },
+    },
+    {
+      title: 'E‑Library',
+      description: 'E‑library application.',
+      status: 'Project',
+      highlights: [],
+      tags: ['Web'],
+      links: { github: 'https://github.com/maandel/E-Library' },
+    },
+    {
+      title: 'Hotel Booking',
+      description: 'Hotel booking application.',
+      status: 'Project',
+      highlights: [],
+      tags: ['Web'],
+      links: { github: 'https://github.com/maandel/hotel_booking' },
+    },
+    {
+      title: 'New Portfolio',
+      description: 'Personal portfolio site.',
+      status: 'Live',
+      highlights: [],
+      tags: ['Portfolio'],
+      links: { github: 'https://github.com/maandel/New-Portfolio' },
+    },
+  ],
   chatbot: {
     enabled: true,
   },
@@ -383,6 +433,9 @@ window.PORTFOLIO_CONFIG = window.PORTFOLIO_CONFIG || PORTFOLIO_CONFIG;
 
   if (!launcher || !panel || !closeBtn || !form || !input || !messages) return;
 
+  panel.hidden = true;
+  launcher.setAttribute('aria-expanded', 'false');
+
   const createBubble = (role, text) => {
     const wrap = document.createElement('div');
     wrap.className = `chatbot-bubble ${role}`;
@@ -402,11 +455,13 @@ window.PORTFOLIO_CONFIG = window.PORTFOLIO_CONFIG || PORTFOLIO_CONFIG;
 
   const open = () => {
     panel.hidden = false;
+    launcher.setAttribute('aria-expanded', 'true');
     setTimeout(() => input.focus(), 0);
   };
 
   const close = () => {
     panel.hidden = true;
+    launcher.setAttribute('aria-expanded', 'false');
     launcher.focus();
   };
 
@@ -464,8 +519,17 @@ window.PORTFOLIO_CONFIG = window.PORTFOLIO_CONFIG || PORTFOLIO_CONFIG;
     addAssistant("Hi — I’m the portfolio assistant (demo mode). Ask about projects, skills, or contact.");
   }
 
-  launcher.addEventListener('click', () => (panel.hidden ? open() : close()));
-  closeBtn.addEventListener('click', close);
+  launcher.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    panel.hidden ? open() : close();
+  });
+
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    close();
+  });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !panel.hidden) close();
