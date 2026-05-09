@@ -33,7 +33,8 @@
                 <span class="logo-icon">ON</span>
                 <span class="logo-text">okiki<span class="logo-dot">.</span>dev</span>
             </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="navMenu"
+                aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <ul id="navMenu">
@@ -59,6 +60,7 @@
             </ul>
         </div>
     </nav>
+    <div class="nav-overlay" id="navOverlay" hidden></div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -301,8 +303,9 @@
                 <span class="section-tag">03</span>
                 <h2>Featured Projects</h2>
             </div>
-            <div class="projects-grid" id="projectsGrid" hidden></div>
-            <div class="projects-grid" id="projectsFallback">
+            <div class="projects-grid" id="projectsGrid"></div>
+            <div class="projects-empty" id="projectsEmpty" hidden>Paste your projects in assets/js/main.js</div>
+            <div class="projects-grid" id="projectsFallback" hidden>
                 <!-- Bookify -->
                 <div class="project-card featured">
                     <div class="project-card-header">
@@ -714,10 +717,9 @@
                     </div>
                     <div class="footer-col">
                         <h4>Projects</h4>
-                        <a href="https://be.bookify.kode.camp/docs" target="_blank">Bookify API</a>
-                        <a href="https://github.com/maandel/Mandel_Blog_Complete" target="_blank">Mandel Blog</a>
-                        <a href="https://github.com/maandel/hotel_booking" target="_blank">Hotel Booking</a>
-                        <a href="https://github.com/maandel?tab=repositories" target="_blank">View All</a>
+                        <a href="#projects">Featured Projects</a>
+                        <a href="https://github.com/maandel" target="_blank">GitHub</a>
+                        <a href="https://github.com/maandel?tab=repositories" target="_blank">All Repos</a>
                     </div>
                 </div>
             </div>
@@ -746,7 +748,7 @@
                     <span class="chatbot-title-badge">Demo</span>
                     <span>Portfolio Assistant</span>
                 </div>
-                <button class="chatbot-close" id="chatbotClose" aria-label="Close assistant">
+                <button type="button" class="chatbot-close" id="chatbotClose" aria-label="Close assistant">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2">
                         <path d="M18 6 6 18M6 6l12 12" />
