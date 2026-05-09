@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -171,7 +171,7 @@
                 </div>
             </div>
             <div class="about-links">
-                <a href="https://github.com/Mandel-Tech" target="_blank" class="btn btn-primary" id="githubBtn">
+                <a href="https://github.com/maandel" target="_blank" class="btn btn-primary" id="githubBtn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -301,7 +301,8 @@
                 <span class="section-tag">03</span>
                 <h2>Featured Projects</h2>
             </div>
-            <div class="projects-grid">
+            <div class="projects-grid" id="projectsGrid" hidden></div>
+            <div class="projects-grid" id="projectsFallback">
                 <!-- Bookify -->
                 <div class="project-card featured">
                     <div class="project-card-header">
@@ -319,7 +320,7 @@
                                             d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                                     </svg>
                                 </a>
-                                <a href="https://github.com/Mandel-Tech" target="_blank" aria-label="GitHub"
+                                <a href="https://github.com/maandel" target="_blank" aria-label="GitHub"
                                     class="project-icon-link">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path
@@ -359,7 +360,7 @@
                                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                             </svg>
                             <div class="project-card-links">
-                                <a href="https://github.com/Mandel-Tech/Mandel_Blog_Complete" target="_blank"
+                                <a href="https://github.com/maandel/Mandel_Blog_Complete" target="_blank"
                                     aria-label="GitHub" class="project-icon-link">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path
@@ -395,7 +396,7 @@
                                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                             </svg>
                             <div class="project-card-links">
-                                <a href="https://github.com/Mandel-Tech/hotel_booking" target="_blank"
+                                <a href="https://github.com/maandel/hotel_booking" target="_blank"
                                     aria-label="GitHub" class="project-icon-link">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path
@@ -430,7 +431,7 @@
                                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                             </svg>
                             <div class="project-card-links">
-                                <a href="https://github.com/Mandel-Tech/mandel_django_blog" target="_blank"
+                                <a href="https://github.com/maandel/mandel_django_blog" target="_blank"
                                     aria-label="GitHub" class="project-icon-link">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path
@@ -464,7 +465,7 @@
                                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                             </svg>
                             <div class="project-card-links">
-                                <a href="https://github.com/Mandel-Tech/flask_auth_app" target="_blank"
+                                <a href="https://github.com/maandel/flask_auth_app" target="_blank"
                                     aria-label="GitHub" class="project-icon-link">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path
@@ -498,7 +499,7 @@
                                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                             </svg>
                             <div class="project-card-links">
-                                <a href="https://github.com/Mandel-Tech?tab=repositories" target="_blank"
+                                <a href="https://github.com/maandel?tab=repositories" target="_blank"
                                     aria-label="GitHub" class="project-icon-link">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path
@@ -656,7 +657,7 @@
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <a href="https://github.com/Mandel-Tech" target="_blank" class="contact-card" id="githubCard">
+                    <a href="https://github.com/maandel" target="_blank" class="contact-card" id="githubCard">
                         <div class="contact-card-icon">⚡</div>
                         <div class="contact-card-info">
                             <h3>GitHub</h3>
@@ -681,7 +682,7 @@
                     <p>Backend developer building scalable APIs with Python. Specialized in FastAPI, Django, and modern
                         backend practices.</p>
                     <div class="footer-socials">
-                        <a href="https://github.com/Mandel-Tech" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/maandel" target="_blank" aria-label="GitHub">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -714,9 +715,9 @@
                     <div class="footer-col">
                         <h4>Projects</h4>
                         <a href="https://be.bookify.kode.camp/docs" target="_blank">Bookify API</a>
-                        <a href="https://github.com/Mandel-Tech/Mandel_Blog_Complete" target="_blank">Mandel Blog</a>
-                        <a href="https://github.com/Mandel-Tech/hotel_booking" target="_blank">Hotel Booking</a>
-                        <a href="https://github.com/Mandel-Tech?tab=repositories" target="_blank">View All</a>
+                        <a href="https://github.com/maandel/Mandel_Blog_Complete" target="_blank">Mandel Blog</a>
+                        <a href="https://github.com/maandel/hotel_booking" target="_blank">Hotel Booking</a>
+                        <a href="https://github.com/maandel?tab=repositories" target="_blank">View All</a>
                     </div>
                 </div>
             </div>
@@ -730,6 +731,47 @@
             </div>
         </div>
     </footer>
+
+    <div class="chatbot" id="chatbot">
+        <button class="chatbot-launcher" id="chatbotLauncher" aria-label="Open assistant">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+                <path d="M8 9h8M8 13h5" />
+            </svg>
+            <span>Ask</span>
+        </button>
+        <div class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Assistant" hidden>
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <span class="chatbot-title-badge">Demo</span>
+                    <span>Portfolio Assistant</span>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close assistant">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M18 6 6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-suggestions" id="chatbotSuggestions">
+                <button type="button" class="chatbot-chip" data-chat-suggest="Show projects">Show projects</button>
+                <button type="button" class="chatbot-chip" data-chat-suggest="What do you build?">What do you build?</button>
+                <button type="button" class="chatbot-chip" data-chat-suggest="How can I contact you?">Contact</button>
+            </div>
+            <form class="chatbot-form" id="chatbotForm">
+                <input class="chatbot-input" id="chatbotInput" type="text" autocomplete="off"
+                    placeholder="Ask about skills, projects, or contact…" />
+                <button class="chatbot-send" type="submit" aria-label="Send message">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M22 2 11 13" />
+                        <path d="M22 2 15 22 11 13 2 9z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
 
     <script src="assets/js/main.js" defer></script>
 </body>
